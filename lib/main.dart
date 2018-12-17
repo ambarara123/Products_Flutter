@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:new_flutter/product_manager.dart';
 import 'package:flutter/rendering.dart';
-import 'package:new_flutter/pages/Home.dart';
+import 'package:new_flutter/pages/products.dart';
+import 'package:new_flutter/pages/auth.dart';
 
 void main() {
   //debugPaintBaselinesEnabled = true;
@@ -27,7 +28,7 @@ class _MyAppState extends State<MyApp>{
     return new MaterialApp(title: "My App",
       theme: ThemeData(primaryColor: Colors.deepOrange
       ),
-      home: HomePage(),
+      home: AuthPage(),
     );
 
   }
