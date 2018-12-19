@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
-import './products.dart';
+
 import './product_create.dart';
 import './product_list.dart';
 
 class ProductAdminPage extends StatelessWidget {
+  final Function addProduct;
+  final Function deleteProducts;
+
+
+  ProductAdminPage(this.addProduct, this.deleteProducts);
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -22,7 +28,7 @@ class ProductAdminPage extends StatelessWidget {
                 onTap: () {
                   Navigator.pushReplacementNamed(
                     context,
-                    '/',
+                    '/products',
                   );
                 },
               )
@@ -45,7 +51,7 @@ class ProductAdminPage extends StatelessWidget {
           ),
         ),
         body: TabBarView(
-          children: <Widget>[CreateProductPage(), ProductListPage()],
+          children: <Widget>[CreateProductPage(addProduct), ProductListPage()],
         ),
       ),
     );

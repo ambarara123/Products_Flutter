@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import '../product_manager.dart';
-import 'package:new_flutter/pages/product_admin.dart';
 
 class ProductsPage extends StatelessWidget {
-  final List<Map<String,String>> products;
-  final Function addProduct;
-  final Function deleteProduct;
+  final List<Map<String,dynamic>> products;
 
 
-  ProductsPage(this.products, this.addProduct, this.deleteProduct);
+
+  ProductsPage(this.products);
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +35,7 @@ class ProductsPage extends StatelessWidget {
         title: new Text("App bar"),
         iconTheme: IconThemeData(color: Colors.white),
       ),
-      body: new ProductManager(products,addProduct,deleteProduct),
+      body: new ProductManager(products),
     );
   }
 }
